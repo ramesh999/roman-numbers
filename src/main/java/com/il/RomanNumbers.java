@@ -9,6 +9,13 @@ public class RomanNumbers {
         if (num <= 0 || num > 3000) {
             throw new IllegalArgumentException(ILLEAGAL_EXCEPTION_MESSAGE);
         }
-        return "I";
+        int temp = num;
+        String value = "";
+
+        while (temp >= 1){
+            value += "I";
+            temp = temp - 1;
+        }
+        return value ;
     }
 }

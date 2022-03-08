@@ -35,7 +35,7 @@ class RomanNumbersTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"1, I"})
+    @CsvSource({"1, I", "2, II"})
     void toRomanNumber_shouldReturnI_whenNumber1Passed(int num, String romanNum) {
         // given
 
