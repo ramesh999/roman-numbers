@@ -2,6 +2,7 @@ package com.il;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static com.il.RomanNumbers.ILLEAGAL_EXCEPTION_MESSAGE;
@@ -31,5 +32,17 @@ class RomanNumbersTest {
 
         // then
         assertEquals(ILLEAGAL_EXCEPTION_MESSAGE, actual.getMessage(), "Message should be equal.");
+    }
+
+    @ParameterizedTest
+    @CsvSource({"1, I"})
+    void toRomanNumber_shouldReturnI_whenNumber1Passed(int num, String romanNum) {
+        // given
+
+        // when
+        String actual = romanNumbers.toRomanNumber(num);
+
+        // then
+        assertEquals(romanNum, actual, "Message should be equal.");
     }
 }

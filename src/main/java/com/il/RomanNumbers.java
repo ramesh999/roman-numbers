@@ -9,6 +9,6 @@ public class RomanNumbers {
         if (num <= 0 || num > 3000) {
             throw new IllegalArgumentException(ILLEAGAL_EXCEPTION_MESSAGE);
         }
-        return "";
+        return "I";
     }
 }
