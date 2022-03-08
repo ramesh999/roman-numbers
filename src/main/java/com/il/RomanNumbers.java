@@ -9,9 +9,41 @@ public class RomanNumbers {
         if (num <= 0 || num > 3000) {
             throw new IllegalArgumentException(ILLEAGAL_EXCEPTION_MESSAGE);
         }
+
         int temp = num;
         String value = "";
-
+        while (temp >= 1000){
+            value += "M";
+            temp = temp - 1000;
+        }
+        while (temp >= 900){
+            value += "CM";
+            temp = temp - 900;
+        }
+        while (temp >= 500){
+            value += "D";
+            temp = temp - 500;
+        }
+        while (temp >= 400){
+            value += "CD";
+            temp = temp - 400;
+        }
+        while (temp >= 100){
+            value += "C";
+            temp = temp - 100;
+        }
+        while (temp >= 90){
+            value += "XC";
+            temp = temp - 90;
+        }
+        while (temp >= 50){
+            value += "L";
+            temp = temp - 50;
+        }
+        while (temp >= 40){
+            value += "XL";
+            temp = temp - 40;
+        }
         while (temp >= 10) {
             value += "X";
             temp = temp - 10;
