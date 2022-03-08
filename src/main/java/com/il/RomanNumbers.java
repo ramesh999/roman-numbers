@@ -12,10 +12,26 @@ public class RomanNumbers {
         int temp = num;
         String value = "";
 
-        while (temp >= 1){
+        while (temp >= 10) {
+            value += "X";
+            temp = temp - 10;
+        }
+        while (temp >= 9) {
+            value += "IX";
+            temp = temp - 9;
+        }
+        while (temp >= 5) {
+            value += "V";
+            temp = temp - 5;
+        }
+        while (temp >= 4) {
+            value += "IV";
+            temp = temp - 4;
+        }
+        while (temp >= 1) {
             value += "I";
             temp = temp - 1;
         }
-        return value ;
+        return value;
     }
 }
